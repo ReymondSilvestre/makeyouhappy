@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Click Me to Make You Happy</title>
+
+  <style>
+    body {
+      background-color: #fff9e6;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    button {
+      padding: 15px 30px;
+      font-size: 18px;
+      background-color: #ffcc00;
+      color: #333;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #ffaa00;
+    }
+
+    #happyImage {
+      margin-top: 30px;
+      display: none;
+      max-width: 300px;
+      animation: pop 0.5s ease;
+    }
+
+    @keyframes pop {
+      0% {
+        transform: scale(0.2);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <button onclick="showImage()">Click Me to Make You Happy</button>
+  <img id="happyImage" src="suga.jpg" alt="Happy Image" />
+
+  <script>
+    function showImage() {
+      const img = document.getElementById('happyImage');
+      img.style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>
